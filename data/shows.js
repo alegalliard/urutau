@@ -27,7 +27,7 @@ const SHOWS = [
     bairro: "Centro",
     ingresso: "",
     video: "",
-    observacao: ""
+    observacao: "mais informações em breve"
   },
 
   // ATENÇÃO: as datas dos 4 shows passados abaixo são placeholders
