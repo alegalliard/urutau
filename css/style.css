@@ -131,6 +131,7 @@ section { position: relative; }
   background: linear-gradient(to bottom, rgba(11,10,8,0.92), rgba(11,10,8,0));
   transition: background 0.4s ease;
 }
+.nav__langs a { font-size: 20px}
 .nav.scrolled {
   background: rgba(11,10,8,0.92);
   border-bottom: 1px solid var(--line);
@@ -148,6 +149,7 @@ section { position: relative; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-dim);
+  align-items: center;
 }
 .nav__links a { transition: color 0.25s ease; padding: 0.3em 0; }
 .nav__links a:hover, .nav__links a:focus-visible { color: var(--brass); }
@@ -293,6 +295,7 @@ section { position: relative; }
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
 }
+.sobre__text p a { text-decoration: underline; }
 .sobre__text p { color: var(--ink-dim); margin: 0 0 1.15em; }
 .sobre__text p:last-child { margin-bottom: 0; }
 .sobre__text strong { color: var(--ink); font-weight: 600; }
@@ -353,7 +356,7 @@ section { position: relative; }
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  align-items: flex-start;
 }
 .disco__art {
   position: relative;
@@ -386,6 +389,10 @@ section { position: relative; }
 }
 .disco__desc { margin-bottom: 1.8rem; }
 
+.disco__text {
+  padding: 10px 20px;
+}
+
 .tracklist {
   list-style: none;
   margin: 0 0 1.8rem;
@@ -399,6 +406,13 @@ section { position: relative; }
   align-items: baseline;
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--line);
+
+  small {
+    font-family: var(--f-mono);
+    font-size: 0.72rem;
+    color: var(--ink-dim);
+    letter-spacing: 0.04em;
+  }
 }
 .tracklist .num {
   font-family: var(--f-mono);
@@ -424,8 +438,8 @@ section { position: relative; }
 
 .single-note {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  margin-top: 5px;
   gap: 0.9rem;
   font-family: var(--f-mono);
   font-size: 0.72rem;
@@ -440,7 +454,7 @@ section { position: relative; }
 }
 
 /* -------------------- botões / links de plataforma -------------------- */
-.btn-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.4rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.4rem; width: 100%;}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -649,4 +663,31 @@ section { position: relative; }
 a:focus-visible, button:focus-visible {
   outline: 1px solid var(--brass);
   outline-offset: 3px;
+}
+
+.track-play {
+  width: 28px; height: 28px;
+  border: 1px solid var(--brass-dim);
+  border-radius: 50%;
+  background: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: none;
+}
+.play-icon {
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent var(--brass);
+  margin-left: 2px; /* otimiza visual do triângulo */
+}
+/* quando está tocando, vira ícone de stopo */
+.track-play.is-playing .play-icon {
+  width: 6px; 
+  height: 10px;
+  border: 0;
+  background: var(--brass);
+  box-shadow: 4px 0 0 var(--brass);
+  margin-left: -4px;
 }
