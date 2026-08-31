@@ -24,10 +24,11 @@ const SHOWS = [
     data: "2026-11-01",
     cidade: "São Paulo - SP",
     local: "Sodom Bar",
-    bairro: "Centro",
-    ingresso: "",
+    bairro: "Centro histórico",
+    ingresso: "https://shows.undershows.com.br/artist/urutau/",
     video: "",
-    observacao: "mais informações em breve"
+    observacao: "Selene Sabbath II · Rua Dr. Falcão Filho, 87 · a partir das 16h · com Prophetic Age, Evil Sense e Língua Sacra",
+    maps: "https://maps.app.goo.gl/Jp5ogxLZzvSQtnhK9"
   },
 
   // ATENÇÃO: as datas dos 4 shows passados abaixo são placeholders
@@ -40,7 +41,8 @@ const SHOWS = [
     bairro: "",
     ingresso: "",
     video: "",
-    observacao: ""
+    observacao: "",
+    maps: ""
   },
   {
     data: "2025-06-01",
@@ -49,7 +51,8 @@ const SHOWS = [
     bairro: "",
     ingresso: "",
     video: "",
-    observacao: ""
+    observacao: "",
+    maps: ""
   },
   {
     data: "2025-03-01",
@@ -58,7 +61,8 @@ const SHOWS = [
     bairro: "",
     ingresso: "",
     video: "",
-    observacao: ""
+    observacao: "",
+    maps: ""
   },
   {
     data: "2024-11-01",
@@ -67,6 +71,7 @@ const SHOWS = [
     bairro: "Pinheiros",
     ingresso: "",
     video: "https://youtu.be/9fpSO8ucZFU",
-    observacao: "Show de estreia da banda"
+    observacao: "Show de estreia da banda",
+    maps: ""
   }
 ];

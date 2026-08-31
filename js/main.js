@@ -103,8 +103,10 @@
             '<span class="eyebrow">Próximo show</span>' +
             '<h3 class="agenda__local">' + local + '</h3>' +
             '<p class="agenda__cidade">' + next.cidade + (next.observacao ? " · " + next.observacao : "") + '</p>' +
+            (next.maps ? '<a href="' + next.maps + '" class="btn-row">Abrir mapa</a>' : '') +
           '</div>' +
           (linksHtml ? '<div class="btn-row">' + linksHtml + '</div>' : '') +
+          
         '</div>';
 
       // se houver mais de um show futuro, lista os demais logo abaixo
