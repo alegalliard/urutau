@@ -754,3 +754,104 @@
     box-shadow: 4px 0 0 var(--brass);
     margin-left: -4px;
   }
+
+/* =========================================================
+   PÁGINA /links/ (link-in-bio, pro QR code do banner impresso)
+   ========================================================= */
+.linkhub {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vw, 4rem) var(--edge) clamp(3rem, 8vw, 5rem);
+}
+.linkhub__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: clamp(2.5rem, 8vw, 3.5rem);
+}
+.linkhub__logo { width: min(58vw, 210px); height: auto; }
+.linkhub__tagline {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.linkhub__group { margin-bottom: clamp(2rem, 6vw, 2.75rem); }
+.linkhub__group:last-child { margin-bottom: 0; }
+.linkhub__group-title {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-bottom: 0.9rem;
+}
+.linkhub__group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.linkhub__list { list-style: none; margin: 0; padding: 0; }
+.linkhub__item {
+  border: 1px solid var(--line);
+  margin-bottom: 0.7rem;
+  background: var(--panel);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.15s ease;
+}
+.linkhub__item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem 1.3rem;
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.linkhub__item .arrow {
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  color: var(--brass-dim);
+  transition: transform 0.25s ease, color 0.25s ease;
+  flex: none;
+}
+.linkhub__item:hover, .linkhub__item:focus-within {
+  border-color: var(--brass-dim);
+  background: var(--panel-raised);
+}
+.linkhub__item:hover .arrow, .linkhub__item:focus-within .arrow {
+  color: var(--brass);
+  transform: translateX(3px);
+}
+.linkhub__item:active { transform: scale(0.99); }
+
+.linkhub__footer {
+  text-align: center;
+  margin-top: clamp(2.5rem, 8vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+.linkhub__back {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+.linkhub__back:hover, .linkhub__back:focus-visible { color: var(--brass); border-color: var(--brass-dim); }
+.linkhub__copy {
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  color: var(--ink-faint);
+}
