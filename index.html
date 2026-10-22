@@ -180,39 +180,41 @@
 
       <div class="disco__meta reveal">
         
+        <p id="previewHelp">As prévias têm duração máxima de 40 segundos.</p>
+
         <ul class="tracklist">
           <li><span class="num">I</span><span class="name">Canto da Morte</span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-canto-da-morte-preview.mp3" data-track="I. Canto da Morte" aria-label="Ouvir prévia de Canto da Morte">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-canto-da-morte-preview.mp3" data-track="I. Canto da Morte" aria-label="Ouvir prévia de Canto da Morte">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
           <li><span class="num">II</span><span class="name">Ticê</span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-tice-preview.mp3" data-track="II. Ticê" aria-label="Ouvir prévia de Ticê">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-tice-preview.mp3" data-track="II. Ticê" aria-label="Ouvir prévia de Ticê">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
           <li><span class="num">III</span><span class="name">Necrochorume</span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-necrochorume-preview.mp3" data-track="III. Necrochorume" aria-label="Ouvir prévia de Necrochorume">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-necrochorume-preview.mp3" data-track="III. Necrochorume" aria-label="Ouvir prévia de Necrochorume">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
           <li><span class="num">IV</span><span class="name">Canibais do Tempo</span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-canibais-do-tempo-preview.mp3" data-track="IV. Canibais do Tempo" aria-label="Ouvir prévia de Canibais do Tempo">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-canibais-do-tempo-preview.mp3" data-track="IV. Canibais do Tempo" aria-label="Ouvir prévia de Canibais do Tempo">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
           <li><span class="num">V</span><span class="name">Psicose Sabática</span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-psicose-sabatica-preview.mp3" data-track="V. Psicose Sabática" aria-label="Ouvir prévia de Psicose Sabática">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-psicose-sabatica-preview.mp3" data-track="V. Psicose Sabática" aria-label="Ouvir prévia de Psicose Sabática">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
           <li><span class="num">VI</span><span class="name">Mapinguari</span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-mapinguari-preview.mp3" data-track="VI. Mapinguari" aria-label="Ouvir prévia de Mapinguari">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-mapinguari-preview.mp3" data-track="VI. Mapinguari" aria-label="Ouvir prévia de Mapinguari">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
           <li><span class="num">VII</span><span class="name">Pindorama <small> - com Vagner Fist</small></span><span class="lore">
-            <button class="track-play" data-audio="assets/audio/urutau-pindorama-preview.mp3" data-track="VII. Pindorama" aria-label="Ouvir prévia de Pindorama">
+            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-pindorama-preview.mp3" data-track="VII. Pindorama" aria-label="Ouvir prévia de Pindorama">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </span></li>
@@ -220,6 +222,7 @@
 
         <!-- um único player, reaproveitado por todas as faixas -->
         <audio id="previewPlayer" preload="none"></audio>
+        <p id="previewStatus" role="status" aria-atomic="true"></p>
 
         <div class="single-note">
           <span class="dot"></span>
