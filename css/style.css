@@ -878,6 +878,17 @@
   height: 1px;
   background: var(--line);
 }
+.linkhub__group-description {
+  margin: 0 0 1rem;
+  color: var(--ink-dim);
+}
+.linkhub__item-description {
+  margin: 0;
+  padding: 0 1.3rem 1.05rem;
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  overflow-wrap: anywhere;
+}
 .linkhub__list { list-style: none; margin: 0; padding: 0; }
 .linkhub__item {
   border: 1px solid var(--line);
