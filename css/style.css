@@ -102,6 +102,7 @@
   
   .eyebrow {
     font-family: var(--f-mono);
+    font-weight: 400;
     font-size: 0.72rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -800,6 +801,7 @@
 .linkhub__group { margin-bottom: clamp(2rem, 6vw, 2.75rem); }
 .linkhub__group:last-child { margin-bottom: 0; }
 .linkhub__group-title {
+  font-weight: 400;
   font-family: var(--f-mono);
   font-size: 0.68rem;
   letter-spacing: 0.2em;
