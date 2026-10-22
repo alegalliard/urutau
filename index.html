@@ -180,49 +180,131 @@
 
       <div class="disco__meta reveal">
         
-        <p id="previewHelp">As prévias têm duração máxima de 40 segundos.</p>
+        <p id="previewHelp">As prévias têm duração máxima de 40 segundos. Use o botão de uma música para abrir o reprodutor acima da lista. Após selecionar a faixa, use o link ao lado do botão para acessar os controles de reprodução, volume e posição.</p>
+
+        <!-- um único player, reaproveitado por todas as faixas -->
+        <div class="preview-player" id="previewRegion" role="region" aria-labelledby="previewLabel" hidden>
+          <p id="previewLabel">Prévia de Canto da Morte</p>
+          <audio id="previewPlayer" controls preload="none" aria-labelledby="previewLabel" aria-describedby="previewHelp" src="assets/audio/urutau-canto-da-morte-preview.mp3"></audio>
+            <details class="preview-transcript" id="transcript-canto-da-morte">
+              <summary>Transcrição da prévia de Canto da Morte</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="4" data-end="5">O que ela quer?</p>
+                <p class="preview-verse" data-start="6" data-end="7">Sua alma</p>
+                <p class="preview-verse" data-start="8" data-end="11">Sua lascívia vai te encantar</p>
+                <p class="preview-verse" data-start="12" data-end="13">O que ela quer?</p>
+                <p class="preview-verse" data-start="14" data-end="15">Sua alma</p>
+                <p class="preview-verse" data-start="16" data-end="20">Ela seduz pra devorar</p>
+                <p class="preview-verse" data-start="36" data-end="39">Caia nas ondas da perdição selvagem</p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-tice" hidden>
+              <summary>Transcrição da prévia de Ticê</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="0" data-end="5">Ela irá te entorpecer</p>
+                <p class="preview-verse" data-start="15" data-end="18">Venha, chegue perto pra que eu possa te enganar</p>
+                <p class="preview-verse" data-start="19" data-end="22">Meu lugar no submundo agora eu vou conquistar</p>
+                <p class="preview-verse" data-start="23" data-end="25">Venha, me encare, meu olhar te fulminar</p>
+                <p class="preview-verse" data-start="26" data-end="30">Vou reinar no submundo, nenhum deus vai me parar</p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-necrochorume" hidden>
+              <summary>Transcrição da prévia de Necrochorume</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="37" data-end="40">Pessoas fracas que dependem do sobrenatural</p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-canibais-do-tempo" hidden>
+              <summary>Transcrição da prévia de Canibais do Tempo</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="0" data-end="2">Canibais do tempo</p>
+                <p class="preview-verse" data-start="3" data-end="5">Sorvem o momento</p>
+                <p class="preview-verse" data-start="6" data-end="12">E a carne da sua vida</p>
+                <p class="preview-verse" data-start="26" data-end="31">Com o sangue dos canibais eu tomo as rédeas da minha vida</p>
+                <p class="preview-verse" data-start="32" data-end="37">Por vingança eu os deixo pra trás nenhum deles me massacra mais</p>
+                <p class="preview-verse" data-start="38" data-end="40">Danço insanamente...</p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-psicose-sabatica" hidden>
+              <summary>Transcrição da prévia de Psicose Sabática</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="1" data-end="3">Minha realidade me salva</p>
+                <p class="preview-verse" data-start="4" data-end="6">Minha loucura te consome</p>
+                <p class="preview-verse" data-start="7" data-end="9">Tema minha magia</p>
+                <p class="preview-verse" data-start="10" data-end="14">Queimadas, torturadas, enforcadas</p>
+                <p class="preview-verse" data-start="16" data-end="22">Meu crime é não ser sua submissa</p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-mapinguari" hidden>
+              <summary>Transcrição da prévia de Mapinguari</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="14" data-end="20">Ouça seus passos</p>
+                <p class="preview-verse" data-start="21" data-end="23">Gritos ecoados</p>
+                <p class="preview-verse" data-start="27" data-end="33">Desalmado</p>
+                <p class="preview-verse" data-start="34" data-end="35">Ele vaga</p>
+                <p class="preview-verse" data-start="36" data-end="39">A sentença te aguarda</p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-pindorama" hidden>
+              <summary>Transcrição da prévia de Pindorama</summary>
+              <div class="preview-transcript__lines" lang="pt-BR">
+                <p class="preview-verse" data-start="18" data-end="21">Pindorama, terra sagrada</p>
+                <p class="preview-verse" data-start="22" data-end="25">Nunca descoberta, mas invadida</p>
+                <p class="preview-verse" data-start="26" data-end="28">Ganância européia</p>
+                <p class="preview-verse" data-start="29" data-end="31">Ao Jesus dos caraíbas</p>
+              </div>
+            </details>
+        </div>
+        <p id="previewStatus" role="status" aria-atomic="true"></p>
+        <p id="previewAnnouncement" class="sr-only" role="status" aria-atomic="true"></p>
 
         <ul class="tracklist">
           <li><span class="num">I</span><span class="name">Canto da Morte</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-canto-da-morte-preview.mp3" data-track="I. Canto da Morte" aria-label="Ouvir prévia de Canto da Morte">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-canto-da-morte-preview.mp3" data-transcript="transcript-canto-da-morte" data-track="I. Canto da Morte" aria-label="Ouvir prévia de Canto da Morte">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
           </span></li>
           <li><span class="num">II</span><span class="name">Ticê</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-tice-preview.mp3" data-track="II. Ticê" aria-label="Ouvir prévia de Ticê">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-tice-preview.mp3" data-transcript="transcript-tice" data-track="II. Ticê" aria-label="Ouvir prévia de Ticê">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
           </span></li>
           <li><span class="num">III</span><span class="name">Necrochorume</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-necrochorume-preview.mp3" data-track="III. Necrochorume" aria-label="Ouvir prévia de Necrochorume">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-necrochorume-preview.mp3" data-transcript="transcript-necrochorume" data-track="III. Necrochorume" aria-label="Ouvir prévia de Necrochorume">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
           </span></li>
           <li><span class="num">IV</span><span class="name">Canibais do Tempo</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-canibais-do-tempo-preview.mp3" data-track="IV. Canibais do Tempo" aria-label="Ouvir prévia de Canibais do Tempo">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-canibais-do-tempo-preview.mp3" data-transcript="transcript-canibais-do-tempo" data-track="IV. Canibais do Tempo" aria-label="Ouvir prévia de Canibais do Tempo">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
           </span></li>
           <li><span class="num">V</span><span class="name">Psicose Sabática</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-psicose-sabatica-preview.mp3" data-track="V. Psicose Sabática" aria-label="Ouvir prévia de Psicose Sabática">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-psicose-sabatica-preview.mp3" data-transcript="transcript-psicose-sabatica" data-track="V. Psicose Sabática" aria-label="Ouvir prévia de Psicose Sabática">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
           </span></li>
           <li><span class="num">VI</span><span class="name">Mapinguari</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-mapinguari-preview.mp3" data-track="VI. Mapinguari" aria-label="Ouvir prévia de Mapinguari">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-mapinguari-preview.mp3" data-transcript="transcript-mapinguari" data-track="VI. Mapinguari" aria-label="Ouvir prévia de Mapinguari">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
           </span></li>
           <li><span class="num">VII</span><span class="name">Pindorama <small> - com Vagner Fist</small></span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="assets/audio/urutau-pindorama-preview.mp3" data-track="VII. Pindorama" aria-label="Ouvir prévia de Pindorama">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="assets/audio/urutau-pindorama-preview.mp3" data-transcript="transcript-pindorama" data-track="VII. Pindorama" aria-label="Ouvir prévia de Pindorama">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
-          </span></li>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir para os controles da prévia</a>
+          </span>
+          </li>
         </ul>
 
-        <!-- um único player, reaproveitado por todas as faixas -->
-        <audio id="previewPlayer" preload="none"></audio>
-        <p id="previewStatus" role="status" aria-atomic="true"></p>
+
 
         <div class="single-note">
           <span class="dot"></span>

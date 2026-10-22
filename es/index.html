@@ -179,49 +179,230 @@
 
       <div class="disco__meta reveal">
         
-        <p id="previewHelp">Los adelantos duran un máximo de 40 segundos.</p>
+        <p id="previewHelp">Los adelantos duran un máximo de 40 segundos. Usa el botón de una pista para abrir el reproductor encima de la lista. Después de elegirla, usa el enlace junto al botón para acceder a los controles de reproducción, volumen y posición.</p>
+
+        <!-- Un único reproductor compartido por todos los temas -->
+        <div class="preview-player" id="previewRegion" role="region" aria-labelledby="previewLabel" hidden>
+          <p id="previewLabel">Adelanto de Canto da Morte</p>
+          <audio id="previewPlayer" controls preload="none" aria-labelledby="previewLabel" aria-describedby="previewHelp" src="../assets/audio/urutau-canto-da-morte-preview.mp3"></audio>
+            <details class="preview-transcript" id="transcript-canto-da-morte">
+              <summary>Transcripción del adelanto de Canto da Morte</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="4" data-end="5">
+                  <span lang="pt-BR">O que ela quer?</span>
+                  <span class="preview-transcript__translation" lang="es">¿Qué quiere ella?</span>
+                </p>
+                <p class="preview-verse" data-start="6" data-end="7">
+                  <span lang="pt-BR">Sua alma</span>
+                  <span class="preview-transcript__translation" lang="es">Tu alma</span>
+                </p>
+                <p class="preview-verse" data-start="8" data-end="11">
+                  <span lang="pt-BR">Sua lascívia vai te encantar</span>
+                  <span class="preview-transcript__translation" lang="es">Su lascivia te encantará</span>
+                </p>
+                <p class="preview-verse" data-start="12" data-end="13">
+                  <span lang="pt-BR">O que ela quer?</span>
+                  <span class="preview-transcript__translation" lang="es">¿Qué quiere ella?</span>
+                </p>
+                <p class="preview-verse" data-start="14" data-end="15">
+                  <span lang="pt-BR">Sua alma</span>
+                  <span class="preview-transcript__translation" lang="es">Tu alma</span>
+                </p>
+                <p class="preview-verse" data-start="16" data-end="20">
+                  <span lang="pt-BR">Ela seduz pra devorar</span>
+                  <span class="preview-transcript__translation" lang="es">Ella seduce para devorar</span>
+                </p>
+                <p class="preview-verse" data-start="36" data-end="39">
+                  <span lang="pt-BR">Caia nas ondas da perdição selvagem</span>
+                  <span class="preview-transcript__translation" lang="es">Cae en las olas de la perdición salvaje</span>
+                </p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-tice" hidden>
+              <summary>Transcripción del adelanto de Ticê</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="0" data-end="5">
+                  <span lang="pt-BR">Ela irá te entorpecer</span>
+                  <span class="preview-transcript__translation" lang="es">Ella te aturdirá</span>
+                </p>
+                <p class="preview-verse" data-start="15" data-end="18">
+                  <span lang="pt-BR">Venha, chegue perto pra que eu possa te enganar</span>
+                  <span class="preview-transcript__translation" lang="es">Ven, acércate para que pueda engañarte</span>
+                </p>
+                <p class="preview-verse" data-start="19" data-end="22">
+                  <span lang="pt-BR">Meu lugar no submundo agora eu vou conquistar</span>
+                  <span class="preview-transcript__translation" lang="es">Ahora conquistaré mi lugar en el inframundo</span>
+                </p>
+                <p class="preview-verse" data-start="23" data-end="25">
+                  <span lang="pt-BR">Venha, me encare, meu olhar te fulminar</span>
+                  <span class="preview-transcript__translation" lang="es">Ven, mírame de frente, mi mirada te fulminará</span>
+                </p>
+                <p class="preview-verse" data-start="26" data-end="30">
+                  <span lang="pt-BR">Vou reinar no submundo, nenhum deus vai me parar</span>
+                  <span class="preview-transcript__translation" lang="es">Reinaré en el inframundo, ningún dios me detendrá</span>
+                </p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-necrochorume" hidden>
+              <summary>Transcripción del adelanto de Necrochorume</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="37" data-end="40">
+                  <span lang="pt-BR">Pessoas fracas que dependem do sobrenatural</span>
+                  <span class="preview-transcript__translation" lang="es">Personas débiles que dependen de lo sobrenatural</span>
+                </p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-canibais-do-tempo" hidden>
+              <summary>Transcripción del adelanto de Canibais do Tempo</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="0" data-end="2">
+                  <span lang="pt-BR">Canibais do tempo</span>
+                  <span class="preview-transcript__translation" lang="es">Caníbales del tiempo</span>
+                </p>
+                <p class="preview-verse" data-start="3" data-end="5">
+                  <span lang="pt-BR">Sorvem o momento</span>
+                  <span class="preview-transcript__translation" lang="es">Sorben el momento</span>
+                </p>
+                <p class="preview-verse" data-start="6" data-end="12">
+                  <span lang="pt-BR">E a carne da sua vida</span>
+                  <span class="preview-transcript__translation" lang="es">Y la carne de tu vida</span>
+                </p>
+                <p class="preview-verse" data-start="26" data-end="31">
+                  <span lang="pt-BR">Com o sangue dos canibais eu tomo as rédeas da minha vida</span>
+                  <span class="preview-transcript__translation" lang="es">Con la sangre de los caníbales tomo las riendas de mi vida</span>
+                </p>
+                <p class="preview-verse" data-start="32" data-end="37">
+                  <span lang="pt-BR">Por vingança eu os deixo pra trás nenhum deles me massacra mais</span>
+                  <span class="preview-transcript__translation" lang="es">Por venganza los dejo atrás; ninguno de ellos me masacra más</span>
+                </p>
+                <p class="preview-verse" data-start="38" data-end="40">
+                  <span lang="pt-BR">Danço insanamente...</span>
+                  <span class="preview-transcript__translation" lang="es">Bailo enloquecidamente...</span>
+                </p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-psicose-sabatica" hidden>
+              <summary>Transcripción del adelanto de Psicose Sabática</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="1" data-end="3">
+                  <span lang="pt-BR">Minha realidade me salva</span>
+                  <span class="preview-transcript__translation" lang="es">Mi realidad me salva</span>
+                </p>
+                <p class="preview-verse" data-start="4" data-end="6">
+                  <span lang="pt-BR">Minha loucura te consome</span>
+                  <span class="preview-transcript__translation" lang="es">Mi locura te consume</span>
+                </p>
+                <p class="preview-verse" data-start="7" data-end="9">
+                  <span lang="pt-BR">Tema minha magia</span>
+                  <span class="preview-transcript__translation" lang="es">Teme mi magia</span>
+                </p>
+                <p class="preview-verse" data-start="10" data-end="14">
+                  <span lang="pt-BR">Queimadas, torturadas, enforcadas</span>
+                  <span class="preview-transcript__translation" lang="es">Quemadas, torturadas, ahorcadas</span>
+                </p>
+                <p class="preview-verse" data-start="16" data-end="22">
+                  <span lang="pt-BR">Meu crime é não ser sua submissa</span>
+                  <span class="preview-transcript__translation" lang="es">Mi crimen es no ser tu sumisa</span>
+                </p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-mapinguari" hidden>
+              <summary>Transcripción del adelanto de Mapinguari</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="14" data-end="20">
+                  <span lang="pt-BR">Ouça seus passos</span>
+                  <span class="preview-transcript__translation" lang="es">Escucha sus pasos</span>
+                </p>
+                <p class="preview-verse" data-start="21" data-end="23">
+                  <span lang="pt-BR">Gritos ecoados</span>
+                  <span class="preview-transcript__translation" lang="es">Gritos que resuenan</span>
+                </p>
+                <p class="preview-verse" data-start="27" data-end="33">
+                  <span lang="pt-BR">Desalmado</span>
+                  <span class="preview-transcript__translation" lang="es">Desalmado</span>
+                </p>
+                <p class="preview-verse" data-start="34" data-end="35">
+                  <span lang="pt-BR">Ele vaga</span>
+                  <span class="preview-transcript__translation" lang="es">Él vaga</span>
+                </p>
+                <p class="preview-verse" data-start="36" data-end="39">
+                  <span lang="pt-BR">A sentença te aguarda</span>
+                  <span class="preview-transcript__translation" lang="es">La sentencia te aguarda</span>
+                </p>
+              </div>
+            </details>
+            <details class="preview-transcript" id="transcript-pindorama" hidden>
+              <summary>Transcripción del adelanto de Pindorama</summary>
+              <div class="preview-transcript__lines">
+                <p class="preview-verse" data-start="18" data-end="21">
+                  <span lang="pt-BR">Pindorama, terra sagrada</span>
+                  <span class="preview-transcript__translation" lang="es">Pindorama, tierra sagrada</span>
+                </p>
+                <p class="preview-verse" data-start="22" data-end="25">
+                  <span lang="pt-BR">Nunca descoberta, mas invadida</span>
+                  <span class="preview-transcript__translation" lang="es">Nunca descubierta, sino invadida</span>
+                </p>
+                <p class="preview-verse" data-start="26" data-end="28">
+                  <span lang="pt-BR">Ganância européia</span>
+                  <span class="preview-transcript__translation" lang="es">Codicia europea</span>
+                </p>
+                <p class="preview-verse" data-start="29" data-end="31">
+                  <span lang="pt-BR">Ao Jesus dos caraíbas</span>
+                  <span class="preview-transcript__translation" lang="es">Al Jesús de los caraíbas</span>
+                </p>
+              </div>
+            </details>
+        </div>
+        <p id="previewStatus" role="status" aria-atomic="true"></p>
+        <p id="previewAnnouncement" class="sr-only" role="status" aria-atomic="true"></p>
 
         <ul class="tracklist">
           <li><span class="num">I</span><span class="name">Canto da Morte</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-canto-da-morte-preview.mp3" data-track="I. Canto da Morte" aria-label="Escucha un adelanto de Canto da Morte">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-canto-da-morte-preview.mp3" data-transcript="transcript-canto-da-morte" data-track="I. Canto da Morte" aria-label="Escucha un adelanto de Canto da Morte">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
           </span></li>
           <li><span class="num">II</span><span class="name">Ticê</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-tice-preview.mp3" data-track="II. Ticê" aria-label="Escucha un adelanto de Ticê">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-tice-preview.mp3" data-transcript="transcript-tice" data-track="II. Ticê" aria-label="Escucha un adelanto de Ticê">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
           </span></li>
           <li><span class="num">III</span><span class="name">Necrochorume</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-necrochorume-preview.mp3" data-track="III. Necrochorume" aria-label="Escucha un adelanto de Necrochorume">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-necrochorume-preview.mp3" data-transcript="transcript-necrochorume" data-track="III. Necrochorume" aria-label="Escucha un adelanto de Necrochorume">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
           </span></li>
           <li><span class="num">IV</span><span class="name">Canibais do Tempo</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-canibais-do-tempo-preview.mp3" data-track="IV. Canibais do Tempo" aria-label="Escucha un adelanto de Canibais do Tempo">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-canibais-do-tempo-preview.mp3" data-transcript="transcript-canibais-do-tempo" data-track="IV. Canibais do Tempo" aria-label="Escucha un adelanto de Canibais do Tempo">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
           </span></li>
           <li><span class="num">V</span><span class="name">Psicose Sabática</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-psicose-sabatica-preview.mp3" data-track="V. Psicose Sabática" aria-label="Escucha un adelanto de Psicose Sabática">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-psicose-sabatica-preview.mp3" data-transcript="transcript-psicose-sabatica" data-track="V. Psicose Sabática" aria-label="Escucha un adelanto de Psicose Sabática">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
           </span></li>
           <li><span class="num">VI</span><span class="name">Mapinguari</span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-mapinguari-preview.mp3" data-track="VI. Mapinguari" aria-label="Escucha un adelanto de Mapinguari">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-mapinguari-preview.mp3" data-transcript="transcript-mapinguari" data-track="VI. Mapinguari" aria-label="Escucha un adelanto de Mapinguari">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
           </span></li>
           <li><span class="num">VII</span><span class="name">Pindorama <small> - con Vagner Fist</small></span><span class="lore">
-            <button class="track-play" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-pindorama-preview.mp3" data-track="VII. Pindorama" aria-label="Escucha un adelanto de Pindorama">
+            <button class="track-play" aria-controls="previewRegion" aria-expanded="false" aria-describedby="previewHelp" data-audio="../assets/audio/urutau-pindorama-preview.mp3" data-transcript="transcript-pindorama" data-track="VII. Pindorama" aria-label="Escucha un adelanto de Pindorama">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
-          </span></li>
+            <a class="preview-jump" href="#previewPlayer" hidden>Ir a los controles del adelanto</a>
+          </span>
+          </li>
         </ul>
 
-        <!-- Un único reproductor compartido por todos los temas -->
-        <audio id="previewPlayer" preload="none"></audio>
-        <p id="previewStatus" role="status" aria-atomic="true"></p>
+
 
         <div class="single-note">
           <span class="dot"></span>
