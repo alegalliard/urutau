@@ -10,6 +10,17 @@
     nav.classList.toggle("scrolled", window.scrollY > 40);
   }, { passive: true });
 
+  // Mantém o foco visível quando a navegação fixa cobre o elemento.
+  document.addEventListener("focusin", function (event) {
+    var target = event.target;
+    if (!nav || nav.contains(target) || target.closest(".skip-link")) return;
+    var bounds = target.getBoundingClientRect();
+    var safeTop = nav.getBoundingClientRect().bottom + 12;
+    if (bounds.top < safeTop) {
+      window.scrollBy({ top: bounds.top - safeTop, behavior: "instant" });
+    }
+  });
+
   if (toggle && links) {
     var mobileMenu = window.matchMedia("(max-width: 720px)");
 

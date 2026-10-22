@@ -37,7 +37,7 @@
   }
   
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
   
   body {
     margin: 0;
@@ -79,8 +79,6 @@
   }
   .skip-link:focus {
     transform: translateY(0);
-    outline: 2px solid var(--brass);
-    outline-offset: 3px;
   }
 
   .sr-only {
@@ -747,10 +745,6 @@
   }
   
   /* -------------------- foco visÃ­vel -------------------- */
-  a:focus-visible, button:focus-visible {
-    outline: 1px solid var(--brass);
-    outline-offset: 3px;
-  }
   
   .track-play {
     width: 28px; height: 28px;
@@ -787,10 +781,6 @@
     cursor: pointer;
     color: var(--brass);
   }
-  .preview-transcript summary:focus-visible {
-    outline: 2px solid var(--brass);
-    outline-offset: 3px;
-  }
   .preview-transcript__lines {
     display: grid;
     gap: 0.5rem;
@@ -818,10 +808,6 @@
     display: block;
     width: 100%;
     color-scheme: light;
-  }
-  .preview-player audio:focus-visible {
-    outline: 2px solid var(--brass);
-    outline-offset: 3px;
   }
   .play-icon {
     width: 0; height: 0;
@@ -940,4 +926,26 @@
   font-family: var(--f-mono);
   font-size: 0.65rem;
   color: var(--ink-faint);
+}
+
+/* Foco de teclado: contorno externo sem alterar o tamanho dos controles. */
+:is(a, button, summary, audio, video, input, select, textarea, iframe):focus-visible {
+  outline: 3px solid var(--brass);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--void);
+  transition: none;
+  animation: none;
+  scroll-margin-block: 1rem;
+}
+:is(a, button, summary):focus-visible * { transition: none; animation: none; }
+.social a:focus-visible { padding-left: 0.2rem; }
+.linkhub__item:focus-within { transition: none; }
+.linkhub__item:focus-within .arrow { transform: none; }
+.reveal:focus-within { opacity: 1; transform: none; transition: none; }
+
+@media (forced-colors: active) {
+  :is(a, button, summary, audio, video, input, select, textarea, iframe):focus-visible {
+    outline-color: Highlight;
+    box-shadow: none;
+  }
 }
