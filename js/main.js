@@ -159,7 +159,10 @@
             '<span class="eyebrow">' + agendaText.next + '</span>' +
             '<h3 class="agenda__local">' + local + '</h3>' +
             '<p class="agenda__cidade">' + next.cidade + (next.observacao ? " · " + next.observacao : "") + '</p>' +
-            (next.maps ? '<a href="' + next.maps + '" class="btn-row">' + agendaText.map + '</a>' : '') +
+            ((next.maps || next.flyer) ? '<div class="btn-row">' +
+              (next.maps ? '<a href="' + next.maps + '">' + agendaText.map + '</a>' : '') +
+              (next.flyer ? '<a href="' + next.flyer + '" target="_blank" rel="noopener">Flyer</a>' : '') +
+            '</div>' : '') +
           '</div>' +
           (linksHtml ? '<div class="btn-row">' + linksHtml + '</div>' : '') +
           

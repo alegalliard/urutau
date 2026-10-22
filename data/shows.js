@@ -12,6 +12,7 @@
     bairro     -> opcional, deixe "" se não quiser mostrar
     ingresso   -> opcional, link de venda de ingresso. Deixe "" se não tiver
     video      -> opcional, link de um vídeo do show (aparece como "assistir")
+    flyer      -> opcional, link do flyer do evento
     observacao -> opcional, qualquer nota extra (ex: "com Mávra e Kvlto")
 
   Pra adicionar um show novo, copie um bloco { ... } inteiro, cole antes
@@ -25,8 +26,9 @@ const SHOWS = [
     cidade: "São Paulo - SP",
     local: "Sodom Bar",
     bairro: "Centro histórico",
-    ingresso: "https://shows.undershows.com.br/artist/urutau/",
+    ingresso: "https://wa.me/5511977862169?text=Ol%C3%A1%2C%20estou%20vindo%20pelo%20site%20da%20Urutau%2C%20gostaria%20de%20pegar%20um%20ingresso%20para%20o%20evento%20Selene%20Sabbath%2C%20do%20dia%2001%20de%20novembro",
     video: "",
+    flyer: "https://shows.undershows.com.br/artist/urutau/",
     observacao: "Selene Sabbath II · Rua Dr. Falcão Filho, 87 · a partir das 16h · com Prophetic Age, Evil Sense e Língua Sacra",
     maps: "https://maps.app.goo.gl/Jp5ogxLZzvSQtnhK9"
   },
