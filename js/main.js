@@ -41,6 +41,13 @@
       });
     });
 
+    document.addEventListener("click", function (event) {
+      if (mobileMenu.matches && links.classList.contains("open") &&
+          !links.contains(event.target) && !toggle.contains(event.target)) {
+        setMenuOpen(false, links.contains(document.activeElement));
+      }
+    });
+
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && mobileMenu.matches &&
           links.classList.contains("open")) {

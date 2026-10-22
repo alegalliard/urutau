@@ -171,7 +171,7 @@
   }
   .nav__links a { transition: color 0.25s ease; padding: 0.3em 0; }
   .nav__links a:hover, .nav__links a:focus-visible { color: var(--brass); }
-  .nav__toggle { display: none; }
+  .nav__toggle { display: none; cursor: pointer; }
   
   @media (max-width: 720px) {
     .nav__links {
