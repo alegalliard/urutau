@@ -468,6 +468,14 @@
     font-size: 0.9rem;
     text-align: right;
   }
+  .track-video {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-family: var(--f-mono);
+    font-size: 0.72rem;
+    color: var(--brass);
+    text-decoration: underline;
+  }
   @media (max-width: 640px) {
     .tracklist li { grid-template-columns: 2rem 1fr; }
     .tracklist .lore { grid-column: 2 / -1; text-align: left; margin-top: 0.15rem; }

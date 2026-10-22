@@ -7,6 +7,7 @@
   Campos de cada show:
     data       -> formato "AAAA-MM-DD" (usado pra ordenar e decidir se é
                   "próximo" ou "passado" automaticamente)
+    evento     -> opcional, nome do evento
     cidade     -> ex: "São Paulo - SP"
     local      -> nome da casa de show
     bairro     -> opcional, deixe "" se não quiser mostrar
@@ -23,6 +24,7 @@
 const SHOWS = [
   {
     data: "2026-11-01",
+    evento: "Selene Sabbath II",
     cidade: "São Paulo - SP",
     local: "Sodom Bar",
     bairro: "Centro histórico",

@@ -113,6 +113,30 @@
     tickets: "Ingressos", watch: "Assistir", next: "Próximo show", map: "Abrir mapa"
   };
 
+  var agendaLabels = es ? {
+    tickets: "Entradas para {event} — {date}", watch: "Ver el concierto en {event} — {date}",
+    map: "Abrir mapa de {venue}", flyer: "Flyer de {event} — {date}"
+  } : en ? {
+    tickets: "Tickets for {event} — {date}", watch: "Watch the show at {event} — {date}",
+    map: "Open map for {venue}", flyer: "Flyer for {event} — {date}"
+  } : {
+    tickets: "Ingressos para {event} — {date}", watch: "Assistir ao show em {event} — {date}",
+    map: "Abrir mapa de {venue}", flyer: "Flyer de {event} — {date}"
+  };
+
+  function agendaLinkLabel(action, show) {
+    var date = parseData(show.data).toLocaleDateString(es ? "es" : en ? "en-US" : "pt-BR", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+    var values = { event: show.evento || show.local, venue: show.local, date: date };
+    var label = agendaLabels[action].replace(/\{(event|venue|date)\}/g, function (_, key) {
+      return values[key];
+    });
+    // Os nomes dos locais podem conter aspas e outros caracteres de HTML.
+    return label.replace(/&/g, "&amp;").replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
   function parseData(str) {
     // "AAAA-MM-DD" -> Date local (evita bug de fuso do new Date("AAAA-MM-DD"))
     var partes = str.split("-").map(Number);
@@ -153,10 +177,10 @@
 
       var linksHtml = "";
       if (next.ingresso) {
-        linksHtml += '<a class="btn" href="' + next.ingresso + '" target="_blank" rel="noopener">' + agendaText.tickets + '</a>';
+        linksHtml += '<a class="btn" href="' + next.ingresso + '" aria-label="' + agendaLinkLabel("tickets", next) + '" target="_blank" rel="noopener">' + agendaText.tickets + '</a>';
       }
       if (next.video) {
-        linksHtml += '<a class="btn btn--ghost" href="' + next.video + '" target="_blank" rel="noopener">' + agendaText.watch + '</a>';
+        linksHtml += '<a class="btn btn--ghost" href="' + next.video + '" aria-label="' + agendaLinkLabel("watch", next) + '" target="_blank" rel="noopener">' + agendaText.watch + '</a>';
       }
 
       proximoEl.innerHTML =
@@ -171,8 +195,8 @@
             '<h3 class="agenda__local">' + local + '</h3>' +
             '<p class="agenda__cidade">' + next.cidade + (next.observacao ? " · " + next.observacao : "") + '</p>' +
             ((next.maps || next.flyer) ? '<div class="btn-row">' +
-              (next.maps ? '<a href="' + next.maps + '">' + agendaText.map + '</a>' : '') +
-              (next.flyer ? '<a href="' + next.flyer + '" target="_blank" rel="noopener">Flyer</a>' : '') +
+              (next.maps ? '<a href="' + next.maps + '" aria-label="' + agendaLinkLabel("map", next) + '">' + agendaText.map + '</a>' : '') +
+              (next.flyer ? '<a href="' + next.flyer + '" aria-label="' + agendaLinkLabel("flyer", next) + '" target="_blank" rel="noopener">Flyer</a>' : '') +
             '</div>' : '') +
           '</div>' +
           (linksHtml ? '<div class="btn-row">' + linksHtml + '</div>' : '') +
@@ -197,8 +221,8 @@
       var d = s._data;
       var local = s.bairro ? (s.local + " — " + s.bairro) : s.local;
       var extra = s.video
-        ? '<a href="' + s.video + '" target="_blank" rel="noopener">' + agendaText.watch + '</a>'
-        : (s.ingresso ? '<a href="' + s.ingresso + '" target="_blank" rel="noopener">' + agendaText.tickets + '</a>' : "");
+        ? '<a href="' + s.video + '" aria-label="' + agendaLinkLabel("watch", s) + '" target="_blank" rel="noopener">' + agendaText.watch + '</a>'
+        : (s.ingresso ? '<a href="' + s.ingresso + '" aria-label="' + agendaLinkLabel("tickets", s) + '" target="_blank" rel="noopener">' + agendaText.tickets + '</a>' : "");
       return (
         '<li class="agenda__row">' +
           '<time datetime="' + s.data + '">' + String(d.getDate()).padStart(2, "0") + " " + MESES[d.getMonth()] + " " + d.getFullYear() + '</time>' +
